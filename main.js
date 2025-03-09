@@ -7,15 +7,16 @@ let time_left = 5;
 let running = false;
 let on_break = false;
 
-let work_time = 900
-let break_time = 300
+let work_time = 900;
+let break_time = 300;
 
 function updateDisplay() {
     let minutes = Math.floor(time_left / 60);
     let seconds = time_left % 60;
     timer_label.innerHTML = `${minutes}:${seconds.toString().padStart(2, '0')}`;
     mode_label.innerHTML = on_break ? "Break" : "Work";
-	document.title = `${on_break ? "Break: " : "Work: "}${minutes}:${seconds.toString().padStart(2, '0')}`;
+    document.body.style = on_break ? "background-color: blue" : "background-color: red";
+    document.title = `${on_break ? "Break: " : "Work: "}${minutes}:${seconds.toString().padStart(2, '0')}`;
 }
 
 function startTimer() {
