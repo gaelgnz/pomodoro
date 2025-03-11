@@ -15,7 +15,7 @@ function updateDisplay() {
     let seconds = time_left % 60;
     timer_label.innerHTML = `${minutes}:${seconds.toString().padStart(2, '0')}`;
     mode_label.innerHTML = on_break ? "Break" : "Work";
-    document.body.style = on_break ? "background-color: blue" : "background-color: red";
+    document.body.style = on_break ? "background-color: rgb(66, 135, 245)" : "background-color: rgb(245, 66, 66)";
     document.title = `${on_break ? "Break: " : "Work: "}${minutes}:${seconds.toString().padStart(2, '0')}`;
 }
 
